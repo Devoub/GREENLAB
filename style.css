@@ -1,0 +1,668 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+
+
+.updateColors {
+  padding: .5rem 1.5rem;
+  border-radius: 10px;
+}
+
+.testBackground {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;left: 0;
+
+}
+
+.testBackground img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.whatToPrint {
+  width: 90vw;
+  height: 150vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0px;
+  padding-right: 30px ;  
+  z-index: -3;
+   top: 0;
+}
+
+
+
+#whatToPrint * {
+  z-index: -3;
+
+}
+
+body {
+  overflow-x:hidden;
+}
+
+#whatToPrint .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 3rem;
+  text-align: center;
+  /* height: 80%; */
+  /* width: 70%;  */
+  font-weight: 700;
+  padding-bottom: 80px;
+  /* position: absolute; */
+
+}
+
+
+.typeAttestation, 
+ .fullName,
+ .footerPDF h3 {
+  color: var(--red-color);
+}
+
+#whatToPrint .typeAttestation {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+#whatToPrint .fullName {
+  font-size: 5rem;
+  text-transform: uppercase;
+  /* letter-spacing: .3rem; */
+}
+
+#whatToPrint .NameIntro {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+#whatToPrint .description {
+  font-size: 1.5rem;
+}
+
+#whatToPrint .greenLabLogo {
+  border-bottom : .3rem solid var(--red-color);
+  width: 200px;
+  align-self: center;
+}
+
+#whatToPrint .greenLabLogo img{
+  width: 150px;
+transform: translateY(50%); 
+margin: 20px; 
+}
+#whatToPrint .dateText {
+  font-size: 1.5rem;
+}
+
+#whatToPrint .centered-Bx {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  row-gap: 1.5rem;
+  height: 30%;
+  border-top: .3rem solid var(--red-color);
+  padding: 1rem;
+}
+
+.footerPDF {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  row-gap: .5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+:root {
+  --green-color: #0f9a49;
+  --blue-color: #35479d;
+  --red-color: #cb2026;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.5s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+input:focus {
+  outline: none;
+}
+
+*::after,
+*::before {
+  transition: all 0.5s ease-in-out;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.btn {
+  border: none;
+  background: none;
+  border: 0.1rem solid var(--green-color);
+  color: #fff;
+  background: var(--green-color);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--red-color);
+  border-color: var(--red-color);
+}
+
+header {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .navbar {
+  width: 50%;
+}
+
+header .navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .navbar .nav-list .nav-item .nav-link {
+  font-weight: 500;
+  color: #fff;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+header .navbar .nav-list .nav-item .nav-link::after {
+  position: absolute;
+  bottom: -1rem;
+  width: 0%;
+  height: 0.3rem;
+  content: "";
+  background: var(--red-color);
+  left: 0;
+}
+
+header .navbar .nav-list .nav-item .nav-link:hover {
+  color: var(--red-color);
+}
+
+header .navbar .nav-list .nav-item .nav-link:hover::after {
+  width: 100%;
+}
+
+.logo {
+  font-size: 2rem;
+  color: var(--green-color);
+}
+
+.logo span {
+  font-weight: 200;
+  color: var(--red-color);
+}
+
+/* ============= START HOME ====================== */
+
+.home {
+  min-height: 100vh;
+  position: relative;
+}
+
+.bg-home {
+  background: url(./img/greenLab.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -2;
+}
+
+.home::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(75, 75, 75);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.home .container .main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  text-align: center;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.home .container .main-content .description {
+  color: #fff;
+}
+
+.home .container .main-content .main-text {
+  font-size: 8rem;
+  color: #fff;
+}
+
+.home .container .main-content .main-text span {
+  color: var(--green-color);
+}
+
+.home .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.btn-certification {
+  padding: 0.7rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+}
+
+.certification {
+  min-height: 180vh;
+  background-image: linear-gradient(to top, #0f9a49 0%, #3cba92 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+
+.certification .container {
+  width: 80%;
+  height:80% ;
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem;
+
+
+}
+
+.certification .container .section2.show{
+  transform: scale(1);
+
+}
+
+.certification .container .section2  {
+  transform: scale(0);
+
+}
+
+.certification .container .section1,
+.certification .container .section2 {
+  display: flex;
+  height: 50%;
+  background: #fff;
+  
+}
+
+.certification .container .section1 .left-side {
+  width: 50%;
+  background: url(./img/forms.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.certification .container .section2 .left-side {
+  width: 70%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certification .container .section2 .left-side .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.certification .container .section2 .left-side .container .typeAttestation {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.certification .container .section2 .left-side .container .centered-Bx {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 1rem;
+  border-top: .3rem solid var(--red-color);
+}
+
+.certification .container .section2 .left-side .container .greenLabLogo {
+  border-bottom: .3rem solid var(--red-color);
+
+}
+
+.certification .container .section2 .left-side .container  .fullName {
+  font-size: 4rem;
+}
+
+.certification .container .section2 .left-side .container .greenLabLogo img {
+  width: 150px;
+}
+
+.certification .container .section2 .right-side {
+  width: 30%;
+}
+
+
+.certification .container .right-side {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.certification .container .SecondaryFormBx {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+}
+
+.certification .container .SecondaryFormBx .inputBx {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+
+
+.formBx {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.formBx label {
+  font-size: 0.8rem;
+}
+
+.formBx .inputBx {
+  width: 80%;
+  height: 30px;
+  margin: 1rem;
+
+}
+
+.formBx .inputBx input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 0.1rem solid var(--green-color);
+  font-size: 1rem;
+
+}
+
+.certification .submit-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom:.5rem;
+}
+
+
+.SecondaryFormBx .inputBx .colorPicker {
+  right: 0;
+  border: none;
+  border-bottom: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  margin: 0;
+}
+
+.formBx .inputBx .colorPicker::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+/* ============ START TABLE =================== */
+
+.table {
+  min-height:100vh;
+  background-color: var(--green-color);
+  position: relative;
+}
+
+.table .heading {
+  font-size: 4rem;
+  text-align: center;
+  color: #fff;
+  position: relative;
+
+}
+
+.table .heading::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: .5rem;
+  border-radius: .5rem;
+  bottom: -.5rem;
+  left: 0;
+  background-color: var(--blue-color);
+
+}
+
+.table .container {
+  display: flex;
+  flex-direction: column;
+align-items: center;
+justify-content: space-around;
+row-gap: 2rem;}
+
+.table .heading span {
+  color: var(--red-color);
+}
+
+.table .table-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #cb2026;
+  flex-direction: column;
+}
+
+.table .table-container .top-section {
+  background: #35479d;
+  display: flex;
+  width: 100%;
+  color: #fff;
+  padding: 1rem;
+
+  
+}
+
+.table .table-container .top-section .nameTitleBx,
+.table .table-container .top-section .downloadTitleBx {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table .table-container .main-section {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.table .table-container .main-section .nameBx,
+.table .table-container .main-section .downloadBx {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3cba92;
+  flex-direction: column;
+}
+
+.table .table-container .main-section .nameBx .name-row,
+.table .table-container .main-section .downloadBx  .download-row {
+  padding: 1rem;
+  height: 50px;
+}
+
+.table .table-container .btn {
+  padding: .3rem 1rem;
+}
+
+.table .table-container .downloadBtn {
+  background-color: var(--red-color);
+  border-color: var(--red-color);
+}
+
+
+/* ======================== START EMAIL WINDOW ===========================*/
+
+
+.WindowBx {
+  position: fixed;
+  top :0;left: 0;
+  width: 100%;
+  height: 100vh;z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+
+}
+
+.show {
+  transform: scale(1);
+
+}
+
+
+.WindowBx::after {
+  position: absolute;
+  top: 0;left: 0;
+  background: #000;
+  top :0;left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  content: '';
+}
+
+.WindowBx .EmailWindow .closeBtn {
+  font-size: 1.5rem;
+  align-self: flex-end;
+  margin: 1rem;
+}
+
+.WindowBx .EmailWindow .comment {
+  color: var(--red-color);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.WindowBx .EmailWindow {
+  width: 40%;
+  height: 50%;
+  border-radius: .5rem;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.WindowBx .EmailWindow .emailInput {
+  width: 300px;
+  height: 50px;
+  padding: .5rem;
+
+}
+
+.WindowBx .EmailWindow .sendEmail {
+  padding: .5rem 2rem;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+  margin: 1rem;
+
+}
+
+
+@media screen and (max-width : 900px) {
+  .home .container .main-content .main-text {
+    font-size: 5rem;
+  }
+
+  .btn-certification {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+  }
+
+  .certification .container .section1,
+  .certification .container .section2 {
+flex-direction: column;
+    
+  }
+}
